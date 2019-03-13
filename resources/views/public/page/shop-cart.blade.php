@@ -64,38 +64,6 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr class="table_row">
-                                <td class="column-1">
-                                    <div class="flex-w flex-m">
-                                        <div class="wrap-pic-w size-w-50 bo-all-1 bocl12 m-r-30">
-                                            <img src="images/best-sell-02.jpg" alt="IMG">
-                                        </div>
-                                        <span>
-                                        Cà chua
-                                        </span>
-                                    </div>
-                                </td>
-                                <td class="column-2">
-                                    12000vnd
-                                </td>
-                                <td class="column-3">
-                                    <div class="wrap-num-product flex-w flex-m bg12 p-rl-10">
-                                        <div class="btn-num-product-down flex-c-m fs-29"></div>
-                                        <input class="txt-m-102 cl6 txt-center num-product" type="number" name="num-product2" value="1">
-                                        <div class="btn-num-product-up flex-c-m fs-16"></div>
-                                    </div>
-                                </td>
-                                <td class="column-4">
-                                    <div class="flex-w flex-sb-m">
-                                        <span>
-                                        12000vnd
-                                        </span>
-                                        <div class="fs-15 hov-cl10 pointer">
-                                            <span class="lnr lnr-cross"></span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
                         </table>
                     </div>
                     <div class="flex-w flex-sb-m p-t-20">
@@ -108,7 +76,7 @@
                     </div>
                     <div class="flex-col-l p-t-68">
                         <span class="txt-m-123 cl3 p-b-18">
-                        CART Thành tiềnS
+                        CART Thành tiền
                         </span>
                         <div class="flex-w flex-m bo-b-1 bocl15 w-full p-tb-18">
                             <span class="size-w-58 txt-m-109 cl3">

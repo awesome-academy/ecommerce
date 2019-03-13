@@ -35,6 +35,11 @@ return [
     'send_mail_fail' => 'Nếu bạn không nhận được email',
     'new_request' => 'Bấm vào đây để yêu cầu cái khác',
     'common_errors'=>'Rất tiếc! Đã xảy ra lỗi!',
+    'label_product'=>'Sản Phẩm',
+    'label_contact'=>'Liên Lạc',
+    'label_phone'=>'Số Điện Thoại',
+    'welcome_home'=>'Trang Chủ',
+    'welcome_name'=>'Chào !',
     'lang' => [
         'en' => 'English',
         'vi' => 'Tiếng Việt',

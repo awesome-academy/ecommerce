@@ -31,6 +31,12 @@ return [
     'send_mail_fail' => 'If you did not receive the email',
     'new_request' => 'Click here to request another',
     'common_errors'=>'Whoops! Something went wrong!',
+    'label_product'=>'Product',
+    'label_contact'=>'Contact',
+    'label_phone'=>'Phone',
+    'welcome_home'=>'Home',
+    'welcome_name'=>'Hi !',
+
     'lang' => [
         'en' => 'English',
         'vi' => 'Tiếng Việt',
