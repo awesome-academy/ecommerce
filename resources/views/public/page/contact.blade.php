@@ -5,14 +5,14 @@
         <div class="container">
             <div class="txt-center p-t-160 p-b-165">
                 <h2 class="txt-l-101 cl0 txt-center p-b-14 respon1">
-                    LIÊN HỆ
+                @lang('index.label_contact')
                 </h2>
                 <span class="txt-m-201 cl0 flex-c-m flex-w">
                 <a href="home.htm" class="txt-m-201 cl0 hov-cl10 trans-04 m-r-6">
-                Home
+                @lang('index.welcome_home')
                 </a>
                 <span>
-                / Contact
+                / @lang('index.label_contact')
                 </span>
                 </span>
             </div>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <h3 class="txt-l-101 cl3 respon1">
-                            LIÊN HỆ
+                            @lang('index.label_contact')
                         </h3>
                     </div>
                     {!! Form::open(['method'=>'POST', 'id'=>'contact-form','class'=>'validate-form','name'=>'contact']) !!}

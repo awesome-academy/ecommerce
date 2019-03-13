@@ -8,8 +8,8 @@
                     shop
                 </h2>
                 <span class="txt-m-201 cl0 flex-c-m flex-w">
-                <a href="home.htm" class="txt-m-201 cl0 hov-cl10 trans-04 m-r-6">
-                Home
+                <a href="/" class="txt-m-201 cl0 hov-cl10 trans-04 m-r-6">
+                @lang('index.welcome_home')
                 </a>
                 <span>
                 / Sản phẩm

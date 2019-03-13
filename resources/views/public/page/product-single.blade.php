@@ -5,11 +5,11 @@
         <div class="container">
             <div class="txt-center p-t-160 p-b-165">
                 <h2 class="txt-l-101 cl0 txt-center p-b-14 respon1">
-                    shop
+                    Shop
                 </h2>
                 <span class="txt-m-201 cl0 flex-c-m flex-w">
                 <a href="home.htm" class="txt-m-201 cl0 hov-cl10 trans-04 m-r-6">
-                Home
+                @lang('index.welcome_home')
                 </a>
                 <a href="shop-sidebar-grid.html" class="txt-m-201 cl0 hov-cl10 trans-04 m-r-6">
                 / Sản phẩm
