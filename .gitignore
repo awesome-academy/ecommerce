@@ -21,3 +21,12 @@ Homestead.json
 /public/storage
 /storage
 /public/svg
+/public/source/
+/public/source/vendor/countterup
+/public/source/vendor/countdowntime
+/public/source/vendor/jqueryui
+/public/source/vendor/MagnificPopup
+/public/source/vendor/noui
+/public/source/vendor/slide100
+/public/source/vendor/waypoint
+/public/source/.idea

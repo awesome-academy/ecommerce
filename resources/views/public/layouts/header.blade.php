@@ -1,0 +1,116 @@
+<div>
+    <header>
+        <div class="container-menu-desktop">
+            <div class="wrap-menu-desktop">
+                <nav class="limiter-menu-desktop">
+                    <div class="left-header">
+                        <!-- Logo desktop -->
+                        <div class="logo">
+                            <a href="{{ route('trang-chu') }}"><img src="source/images/icons/logochau.png" alt="IMG-LOGO"></a>
+                        </div>
+                    </div>
+                    <div class="center-header">
+                        <!-- Menu desktop -->
+                        <div class="menu-desktop">
+                            <ul class="main-menu">
+                                <li>
+                                    <a href="{{ route('san-pham') }}">SẢN PHẨM</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="shop-sidebar-grid.html">RAU CỦ</a></li>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop-sidebar-grid.html">RAU</a></li>
+                                            <li><a href="shop-sidebar-grid.html">CỦ</a></li>
+                                        </ul>
+                                        <li><a href="shop-sidebar-grid.html">TRÁI CÂY ĐẶC SẢN VIỆT NAM</a></li>
+                                        <li><a href="shop-sidebar-grid.html">TRÁI CÂY NHẬP KHẨU</a></li>
+                                        <li><a href="shop-sidebar-grid.html">ĐỒ KHÔ</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{{ route('lien-he') }}">LIÊN HỆ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-header">
+                        <!-- Icon header -->
+                        <div class="wrap-icon-header flex-w flex-r-m h-full wrap-menu-click p-t-8">
+                            <!--Search -->
+                            <div class="h-full flex-m">
+                                <div class="icon-header-item flex-c-m trans-04 js-show-modal-search">
+                                    <img src="source/images/icons/icon-search.png" alt="SEARCH">
+                                </div>
+                            </div>
+                            <!--...-->
+                            <div class="wrap-cart-header h-full flex-m m-l-10 menu-click">
+                                <div class="icon-header-item flex-c-m trans-04" id="icon-user">
+                                    <img src="source/images/icons/icon-user.png" alt="user">
+                                </div>
+                                <div class="cart-header menu-click-child trans-04">
+                                    <a href="myaccount.html" class="txt-s-101 cl9 hov-cl10 trans-04">Chi Tiết</a><br/>
+                                    <a href="wishlist.html" class="txt-s-101 cl9 hov-cl10 trans-04">WishList</a>
+                                    <div class="flex-w flex-m p-t-15 p-b-10">
+                                        <button class="flex-c-m txt-s-105 cl0 bg10 size-a-39 hov-btn2 trans-04 p-rl-10 m-r-18">
+                                        Đăng xuất
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--....-->
+                            <div class="wrap-cart-header h-full flex-m m-l-10 menu-click">
+                                <div id="icon-login" class="icon-header-item flex-c-m trans-04" >
+                                    <img src="source/images/icons/icon-login.png" alt="login">
+                                </div>
+                                <div id="form-login" class="cart-header menu-click-child trans-04">
+                                    <form action="javascript:void(0)" onsubmit="login()">
+                                        <div class="p-b-24">
+                                            <input class="txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-15 focus1" type="text" name="username" id="username" value=""
+                                                placeholder="Tên đăng nhập">
+                                        </div>
+                                        <div class="p-b-24">
+                                            <input class="txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-15 focus1" type="password" id="password" name="password"
+                                                placeholder="Mật khẩu" value="">
+                                        </div>
+                                        <div class="flex-w flex-m p-t-15 p-b-10">
+                                            <input type="submit" class="flex-c-m txt-s-105 cl0 bg10 size-a-39 hov-btn2 trans-04 p-rl-10 m-r-18">
+                                            <div class="flex-w flex-m p-tb-8">
+                                                <input id="check-creatacc" class="size-a-35 m-r-10" type="checkbox" name="creatacc">
+                                                <label for="check-creatacc" class="txt-s-101 cl9">
+                                                Ghi nhớ
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <a href="account-lost-pass.html" class="txt-s-101 cl9 hov-cl10 trans-04">
+                                        Quên mật khẩu?
+                                        </a>
+                                    </form>
+                                    <a href="account.html" class="txt-s-101 cl9 hov-cl10 trans-04">
+                                    Đăng ký
+                                    </a>
+                                    <div class="social">
+                                        <div class="social-inner">
+                                            <a class="fa fa-2x fa-google btn btn-danger" href="#"></a>
+                                            <a class="fa fa-2x fa-twitter btn btn-info" href="#"></a>
+                                            <a class="fa fa-2x fa-facebook btn btn-primary" href="#"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @include('public.page.cart')
+                        </div>
+                    </div>
+                </nav>
+                <!--Edit Search-->
+                <div class="container-search-header" id="container-search-header" style="display:none;">
+                    {!! Form::open(['method'=>'POST', 'class'=>'wrap-search-header flex-w']) !!}
+                    <button class="flex-c-m trans-04">
+                    <span class="lnr lnr-magnifier"></span>
+                    </button>
+                    {!! Form::text('search', '', ['placeholder'=>'Search','class' => 'plh1']) !!}
+                    {!! Form::close() !!}
+                </div>
+                <!--Edit Search-->
+            </div>
+        </div>
+    </header>
+</div>
