@@ -280,7 +280,6 @@
             </div>
         </div>
     </div>
-    <!-- Product -->
     <div class="sec-product bg0 p-t-145 p-b-25">
         <div class="container">
             <div class="size-a-1 flex-col-c-m p-b-48">
@@ -316,18 +315,19 @@
                     </button>
                 </div>
             </div>
-            <div class="row isotope-grid">
+                       <div class="row isotope-grid">
+                @foreach($product as $products)
                 <!-- - -->
                 <div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item fruit-juic-fill other-fill">
                     <div class="block1">
                         <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
-                            <img src="source/images/product-01.jpg" alt="IMG">
+                            <img src="{{$products->image_list}}" alt="IMG">
                             <div class="block1-content flex-col-c-m p-b-46">
                                 <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                Red pumpkin
+
                                 </a>
                                 <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                21vnd
+                                <h2>{{$products->price}} $</h2>
                                 </span>
                                 <div class="block1-wrap-icon flex-c-m flex-w trans-05">
                                     <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
@@ -345,205 +345,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- - -->
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item fruit-fill">
-                    <div class="block1">
-                        <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
-                            <img src="source/images/product-02.jpg" alt="IMG">
-                            <div class="block1-content flex-col-c-m p-b-46">
-                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                Strawberry
-                                </a>
-                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                23vnd
-                                </span>
-                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                    </a>
-                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                    </a>
-                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- - -->
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item vegetable-fill dried-fill other-fill">
-                    <div class="block1">
-                        <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
-                            <img src="source/images/product-03.jpg" alt="IMG">
-                            <div class="block1-content flex-col-c-m p-b-46">
-                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                Cauliflower
-                                </a>
-                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                19vnd
-                                </span>
-                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                    </a>
-                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                    </a>
-                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- - -->
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item vegetable-fill dried-fill">
-                    <div class="block1">
-                        <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
-                            <img src="source/images/product-04.jpg" alt="IMG">
-                            <div class="block1-content flex-col-c-m p-b-46">
-                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                Vegetable
-                                </a>
-                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                22vnd
-                                </span>
-                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                    </a>
-                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                    </a>
-                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- - -->
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item fruit-fill fruit-juic-fill other-fill">
-                    <div class="block1">
-                        <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
-                            <img src="source/images/product-05.jpg" alt="IMG">
-                            <div class="block1-content flex-col-c-m p-b-46">
-                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                Bell pepper
-                                </a>
-                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                12vnd
-                                </span>
-                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                    </a>
-                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                    </a>
-                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- - -->
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item fruit-juic-fill">
-                    <div class="block1">
-                        <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
-                            <img src="source/images/product-06.jpg" alt="IMG">
-                            <div class="block1-content flex-col-c-m p-b-46">
-                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                Beetroot
-                                </a>
-                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                9vnd
-                                </span>
-                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                    </a>
-                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                    </a>
-                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item vegetable-fill other-fill">
-                    <div class="block1">
-                        <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
-                            <img src="source/images/product-07.jpg" alt="IMG">
-                            <div class="block1-content flex-col-c-m p-b-46">
-                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                Cabbage
-                                </a>
-                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                15vnd
-                                </span>
-                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                    </a>
-                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                    </a>
-                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- - -->
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item fruit-fill fruit-juic-fill">
-                    <div class="block1">
-                        <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
-                            <img src="source/images/product-08.jpg" alt="IMG">
-                            <div class="block1-content flex-col-c-m p-b-46">
-                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                Tomato
-                                </a>
-                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                38vnd
-                                </span>
-                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                    </a>
-                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                    </a>
-                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
-        </div>
-    </div>
-    <!-- Product2 -->
+            <div class="row">{{$product}}</div>
+
     <section class="sec-product2 bg0 p-t-110 p-b-50">
         <div class="size-w-20 m-rl-auto p-rl-15">
             <div class="row">
@@ -567,16 +372,16 @@
                         </div>
                         <div class="wrap-slick4 bo-all-1 bocl12">
                             <div class="slick4">
+                                @foreach($product as $products)
                                 <div class="item-slick4">
                                     <div class="block1">
                                         <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-18.jpg" alt="IMG">
+                                            <img src="{{$products->image_list}}" alt="IMG">
                                             <div class="block1-content flex-col-c-m p-b-46">
                                                 <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Cherry
                                                 </a>
                                                 <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                21$
+                                                <h2>{{$products->price}} $</h2>
                                                 </span>
                                                 <div class="block1-wrap-icon flex-c-m flex-w trans-05">
                                                     <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
@@ -594,141 +399,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item-slick4">
-                                    <div class="block1">
-                                        <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-19.jpg" alt="IMG">
-                                            <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Asparagus
-                                                </a>
-                                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                12$
-                                                </span>
-                                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                                    </a>
-                                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                                    </a>
-                                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-slick4">
-                                    <div class="block1">
-                                        <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-20.jpg" alt="IMG">
-                                            <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Onion
-                                                </a>
-                                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                8$
-                                                </span>
-                                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                                    </a>
-                                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                                    </a>
-                                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-slick4">
-                                    <div class="block1">
-                                        <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-18.jpg" alt="IMG">
-                                            <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Cherry
-                                                </a>
-                                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                21$
-                                                </span>
-                                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                                    </a>
-                                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                                    </a>
-                                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-slick4">
-                                    <div class="block1">
-                                        <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-19.jpg" alt="IMG">
-                                            <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Asparagus
-                                                </a>
-                                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                12$
-                                                </span>
-                                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                                    </a>
-                                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                                    </a>
-                                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-slick4">
-                                    <div class="block1">
-                                        <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-20.jpg" alt="IMG">
-                                            <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Onion
-                                                </a>
-                                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                8$
-                                                </span>
-                                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                                    </a>
-                                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                                    </a>
-                                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                             <div class="wrap-arrow-slick4 flex-w">
                                 <button class="arrow-slick4 prev-slick4">
@@ -761,13 +432,14 @@
                         </div>
                         <div class="wrap-slick4 bo-all-1 bocl12">
                             <div class="slick4">
+                                @foreach($product as $products)
                                 <div class="item-slick4">
                                     <div class="block1">
                                         <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-21.jpg" alt="IMG">
+                                            <img src="{{$products->image_link}}" alt="IMG">
                                             <div class="block1-content flex-col-c-m p-b-46">
                                                 <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Mango
+                                                <h2>{{$products->price}} $</h2>
                                                 </a>
                                                 <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
                                                 38$
@@ -788,141 +460,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item-slick4">
-                                    <div class="block1">
-                                        <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-22.jpg" alt="IMG">
-                                            <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Grape
-                                                </a>
-                                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                23$
-                                                </span>
-                                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                                    </a>
-                                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                                    </a>
-                                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-slick4">
-                                    <div class="block1">
-                                        <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-23.jpg" alt="IMG">
-                                            <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Pomegranate
-                                                </a>
-                                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                19$
-                                                </span>
-                                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                                    </a>
-                                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                                    </a>
-                                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-slick4">
-                                    <div class="block1">
-                                        <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-21.jpg" alt="IMG">
-                                            <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Mango
-                                                </a>
-                                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                38$
-                                                </span>
-                                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                                    </a>
-                                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                                    </a>
-                                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-slick4">
-                                    <div class="block1">
-                                        <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-22.jpg" alt="IMG">
-                                            <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Grape
-                                                </a>
-                                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                23$
-                                                </span>
-                                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                                    </a>
-                                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                                    </a>
-                                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-slick4">
-                                    <div class="block1">
-                                        <div class="block1-bg wrap-pic-w">
-                                            <img src="source/images/product-23.jpg" alt="IMG">
-                                            <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                Pomegranate
-                                                </a>
-                                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                19$
-                                                </span>
-                                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                                    <img src="source/images/icons/icon-view.png" alt="ICON">
-                                                    </a>
-                                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                                    <img src="source/images/icons/icon-cart.png" alt="ICON">
-                                                    </a>
-                                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                                    <img class="icon-addwish-b1" src="source/images/icons/icon-heart.png" alt="ICON">
-                                                    <img class="icon-addedwish-b1" src="source/images/icons/icon-heart2.png" alt="ICON">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                             <div class="wrap-arrow-slick4 flex-w">
                                 <button class="arrow-slick4 prev-slick4">
@@ -938,5 +476,6 @@
             </div>
         </div>
     </section>
+
 </div>
 @endsection
