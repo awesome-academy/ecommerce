@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class PageController extends Controller
 {
     public function getIndex(){
-        return view('public.page.index');
+        $product= DB::table('product')->paginate(config('setting.number'));
+        return view('public.page.index', ['product'=>$product], compact('product'));
     }
 
     public function getProduct(){
@@ -37,6 +40,4 @@ class PageController extends Controller
     public function getCheckout(){
         return view('public.page.checkout');
     }
-    
-    
 }
