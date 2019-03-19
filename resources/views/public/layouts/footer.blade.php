@@ -4,7 +4,7 @@
             <div class="footer-col1">
                 <div class="footer-col-title">
                     <a href="#">
-                    <img src="source/images/icons/logochau.png" alt="LOGO">
+                    <img src="/source/images/icons/logochau.png" alt="LOGO">
                     </a>
                 </div>
                 <p class="txt-s-101 cl6 size-w-10 p-b-16">
@@ -13,7 +13,7 @@
                 <ul>
                     <li class="txt-s-101 cl6 flex-t p-b-10">
                         <span class="size-w-11">
-                        <img src="source/images/icons/icon-mail.png" alt="ICON-MAIL">
+                        <img src="/source/images/icons/icon-mail.png" alt="ICON-MAIL">
                         </span>
                         <span class="size-w-12 p-t-1">
                         OrganicStore@gmail.com
@@ -21,7 +21,7 @@
                     </li>
                     <li class="txt-s-101 cl6 flex-t p-b-10">
                         <span class="size-w-11">
-                        <img src="source/images/icons/icon-pin.png" alt="ICON-MAIL">
+                        <img src="/source/images/icons/icon-pin.png" alt="ICON-MAIL">
                         </span>
                         <span class="size-w-12 p-t-1">
                         Thứ 2 đến CN: 9h - 18h (Hotline), 7h - 22h (chat trực tuyến)
@@ -29,7 +29,7 @@
                     </li>
                     <li class="txt-s-101 cl6 flex-t p-b-10">
                         <span class="size-w-11">
-                        <img src="source/images/icons/icon-pin.png" alt="ICON-MAIL">
+                        <img src="/source/images/icons/icon-pin.png" alt="ICON-MAIL">
                         </span>
                         <span class="size-w-12 p-t-1">
                         193 Nguyễn Lương Bằng, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng
@@ -37,7 +37,7 @@
                     </li>
                     <li class="txt-s-101 cl6 flex-t p-b-10">
                         <span class="size-w-11">
-                        <img src="source/images/icons/icon-phone.png" alt="ICON-MAIL">
+                        <img src="/source/images/icons/icon-phone.png" alt="ICON-MAIL">
                         </span>
                         <span class="size-w-12 p-t-1">
                         0236 3842 326
@@ -115,15 +115,13 @@
                 <div class="flex-w flex-sb p-t-6">
                     <div class="size-w-13 m-b-10">
                         <a href="#" class="dis-block size-a-7 bg-img1 hov4"
-                            style="background-image: url('source/images/instagram-01.jpg');"></a>
+                           ></a>
                     </div>
                     <div class="size-w-13 m-b-10">
-                        <a href="#" class="dis-block size-a-7 bg-img1 hov4"
-                            style="background-image: url('source/images/instagram-02.jpg');"></a>
+                        <a href="#" class="dis-block size-a-7 bg-img2 hov4"></a>
                     </div>
                     <div class="size-w-13 m-b-10">
-                        <a href="#" class="dis-block size-a-7 bg-img1 hov4"
-                            style="background-image: url('source/images/instagram-03.jpg');"></a>
+                        <a href="#" class="dis-block size-a-7 bg-img2 hov4"></a>
                     </div>
                 </div>
             </div>
@@ -134,19 +132,19 @@
             </span>
             <div class="flex-w flex-m">
                 <a href="#" class="m-r-29 m-tb-10">
-                <img src="source/images/icons/icon-pay-01.png" alt="ICON-PAY">
+                <img src="/source/images/icons/icon-pay-01.png" alt="ICON-PAY">
                 </a>
                 <a href="#" class="m-r-29 m-tb-10">
-                <img src="source/images/icons/icon-pay-02.png" alt="ICON-PAY">
+                <img src="/source/images/icons/icon-pay-02.png" alt="ICON-PAY">
                 </a>
                 <a href="#" class="m-r-29 m-tb-10">
-                <img src="source/images/icons/icon-pay-03.png" alt="ICON-PAY">
+                <img src="/source/images/icons/icon-pay-03.png" alt="ICON-PAY">
                 </a>
                 <a href="#" class="m-r-29 m-tb-10">
-                <img src="source/images/icons/icon-pay-04.png" alt="ICON-PAY">
+                <img src="/source/images/icons/icon-pay-04.png" alt="ICON-PAY">
                 </a>
                 <a href="#">
-                <img src="source/images/icons/icon-pay-05.png" alt="ICON-PAY">
+                <img src="/source/images/icons/icon-pay-05.png" alt="ICON-PAY">
                 </a>
             </div>
         </div>

@@ -39,6 +39,7 @@
     {{ Html::style('source/css/util.css') }}
 
     {{ Html::style('source/css/main.css') }}
+    {{ Html::style('source/css/style.css') }}
 
 </head>
 

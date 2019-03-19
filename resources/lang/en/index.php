@@ -38,7 +38,17 @@ return [
     'welcome_name' => 'Hi !',
     'total_price' => 'Total',
     'order_detail' => 'Order Detail',
-
+    'vegetable'=>'vegetable',
+    'btn_add_cart'=>'add_cart',
+    'category'=>'Category of product',
+    'money'=>'Money of product',
+    'weight'=>'Weight of product',
+    'similar'=>'Smalar product',
+    'descript'=>'Description product',
+    'review'=>'Review product',
+    'amount'=>'Amount product',
+    'rating'=>'Rating product',
+    'shop'=>'Shop',
     'lang' => [
         'en' => 'English',
         'vi' => 'Tiếng Việt',

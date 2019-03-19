@@ -6,7 +6,7 @@
                     <div class="left-header">
                         <!-- Logo desktop -->
                         <div class="logo">
-                            <a href="{{ route('trang-chu') }}"><img src="source/images/icons/logochau.png" alt="IMG-LOGO"></a>
+                            <a href="{{ route('index') }}"><img src="/source/images/icons/logochau.png" alt="IMG-LOGO"></a>
                         </div>
                     </div>
                     <div class="center-header">
@@ -14,7 +14,7 @@
                         <div class="menu-desktop">
                             <ul class="main-menu">
                                 <li>
-                                    <a href="{{ route('san-pham') }}">@lang('index.label_product')</a>
+                                    <a href="{{ route('product') }}">@lang('index.label_product')</a>
                                     <ul class="sub-menu">
                                         <li><a href="shop-sidebar-grid.html">RAU CỦ</a></li>
                                         <ul class="sub-menu">
@@ -27,7 +27,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="{{ route('lien-he') }}">@lang('index.label_contact')</a>
+                                    <a href="{{ route('contact') }}">@lang('index.label_contact')</a>
                                 </li>
                             </ul>
                         </div>
@@ -39,14 +39,14 @@
                             <!--Search -->
                             <div class="h-full flex-m">
                                 <div class="icon-header-item flex-c-m trans-04 js-show-modal-search">
-                                    <img src="source/images/icons/icon-search.png" alt="SEARCH">
+                                    <img src="/source/images/icons/icon-search.png" alt="SEARCH">
                                 </div>
                             </div>
                             <!--...-->
                             @guest
                             <div class="wrap-cart-header h-full flex-m m-l-10 menu-click">
                                 <div id="icon-login" class="icon-header-item flex-c-m trans-04" >
-                                    <img src="source/images/icons/icon-login.png" alt="login">
+                                    <img src="/source/images/icons/icon-login.png" alt="login">
                                 </div>
                                 <div id="form-login" class="cart-header menu-click-child trans-04">
                                     {!! Form::open(['route' => 'login', 'method' => 'POST']) !!}
@@ -67,7 +67,7 @@
                                     @lang('index.label_forgot_password')
                                     </a>
                                     {!! Form::close() !!}
-                                    <a href="account.html" class="txt-s-101 cl9 hov-cl10 trans-04">
+                                    <a href="{{route('registere')}}" class="txt-s-101 cl9 hov-cl10 trans-04">
                                     @lang('index.btn_register')
                                     </a>
                                     <div class="social">
@@ -82,7 +82,7 @@
                             @else
                             <div class="wrap-cart-header h-full flex-m m-l-10 menu-click">
                                 <div class="icon-header-item flex-c-m trans-04" id="icon-user">
-                                    <img src="source/images/icons/icon-user.png" alt="user">
+                                    <img src="/source/images/icons/icon-user.png" alt="user">
                                 </div>
                                 <div class="cart-header menu-click-child trans-04">
                                     <a href="myaccount.html" class="txt-s-101 cl9 hov-cl10 trans-04">@lang('index.welcome_name'): {{ Auth::user()->name }} </a><br/>
