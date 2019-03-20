@@ -20,14 +20,12 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
     }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
     public function boot()
     {
-        //
+        view()->composer(['public/layouts/header', 'public/page/index'], function ($view) {
+            $category = Category::all();
+            $view->with('category', $category);
+        });
 
         view()->composer(['public/page/cart', 'public/page/shop-cart'], function ($view) {
             if (Session('cart')) {
@@ -37,9 +35,5 @@ class AppServiceProvider extends ServiceProvider
             }
         });
 
-        view()->composer(['public/layouts/header', 'public/page/index'], function ($view) {
-            $category = Category::all();
-            $view->with('category', $category);
-        });
     }
 }

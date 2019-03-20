@@ -30,14 +30,18 @@
                     </div>
 
                     <div class="size-w-14 flex-b">
-                        <button class="lh-10">
-                            <img src="source/images/icons/icon-close.png" alt="CLOSE">
-                        </button>
+            </button>
+                        <a href="{{route('del-cart',$product['item']['id'])}}">
+                            <button class="lh-10">
+                                <img src="source/images/icons/icon-close.png" alt="CLOSE">
+                            </button>
+                        </a>
                     </div>
                 </div>
                 @endforeach
             </div>
         </div>
+
         <div class="flex-w flex-sb-m p-t-22 p-b-12">
             <span class="txt-m-103 cl3 p-r-20">
                 @lang('index.total_price')
@@ -47,6 +51,7 @@
                 @if(Session::has('cart')){{number_format($totalPrice)}} @else 0 @endif USD
             </span>
         </div>
+
         <a href="{{route('shopcart')}}" class="flex-c-m size-a-8 bg10 txt-s-105 cl13 hov-btn2 trans-04">
             @lang('index.order_detail')
         </a>

@@ -323,8 +323,13 @@
                         <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
                             <img src="{{$products->image_list}}" alt="IMG">
                             <div class="block1-content flex-col-c-m p-b-46">
+<<<<<<< HEAD
                                 <a href="#" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
                                 {{$products->name}}
+=======
+                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+                                    {{$products->name}}
+>>>>>>> delete cart
                                 </a>
                                 <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
                                 <h2>{{$products->price}} $</h2>
