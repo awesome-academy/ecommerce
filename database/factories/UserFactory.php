@@ -28,17 +28,19 @@ $factory->define(User::class, function (Faker $faker) {
 $factory->define(App\Models\Category::class, function (Faker $faker) {
     return [
         'name'=>$faker->name,
-        'parent_id'=>$faker->numberBetween(1,100),
+        'parent_id'=>$faker->numberBetween(1, 100),
     ];
 });
 $factory->define(App\Models\Product::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
-        'price' => $faker-> numberBetween(1,100),
+        'price' => $faker-> numberBetween(1, 100),
         'image_link' => $faker->imageUrl($width = 720, $height = 880),
         'image_list' => $faker->imageUrl($width = 720, $height = 880),
-        'view' =>$faker->numberBetween(1,100),
+        'view' =>$faker->numberBetween(1, 100),
         'category_id' =>factory('App\Models\Category')->create()->id,
+        'weight'=>$faker->numberBetween(0, 5),
+        'description'=>$faker->sentence
     ];
 });
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -15,6 +16,18 @@ class PageController extends Controller
         $product = DB::table('product')->paginate(config('setting.number'));
 
         return view('public.page.index', ['product' => $product], compact('product'));
+    }
+
+    public function getProductsingle(Request $req)
+    {
+        try {
+            $product = Product::where('id', $req->id)->first();
+            $product_id = Category::find($product->category_id);
+            $product_tt = Product::where('category_id', $product->category_id)->get();
+            return view('public.page.product_single', compact('product', 'product_id', 'product_tt'));
+        } catch (Exception $e) {
+            return Redirect::to('/')->with('msg', ' Sorry something went worng. Please try again.');
+        }
     }
 
     public function getProduct()

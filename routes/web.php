@@ -14,23 +14,29 @@
 /* Route::get('/', function () {
 return view('welcome');
 }); */
-Route::get('/', ['as' => 'trang-chu', 'uses' => 'PageController@getIndex']);
 
-Route::get('/san-pham', ['as' => 'san-pham', 'uses' => 'PageController@getProduct']);
+Route::get('/' , ['as'=>'index', 'uses'=> 'PageController@getIndex']);
 
-Route::get('/lien-he', ['as' => 'lien-he', 'uses' => 'PageController@getContact']);
+Route::get('/product' , ['as'=>'product', 'uses'=> 'PageController@getProduct']);
 
-Route::get('/dang-ky', ['as' => 'dang-ky', 'uses' => 'PageController@getRegister']);
+Route::get('/contact' , ['as'=>'contact', 'uses'=> 'PageController@getContact']);
 
-Route::get('/thong-tin-cua-toi', ['as' => 'thong-tin-cua-toi', 'uses' => 'PageController@getMyAccount']);
+Route::get('/registere' , ['as'=>'registere', 'uses'=> 'PageController@getRegister']);
 
-Route::get('/shopcart', ['as' => 'shopcart', 'uses' => 'PageController@getShopCart']);
+Route::get('/myaccount' , ['as'=>'myaccount', 'uses'=> 'PageController@getMyAccount']);
 
-Route::get('/san-pham-yeu-thich', ['as' => 'san-pham-yeu-thich', 'uses' => 'PageController@getWishlist']);
+Route::get('/shopcart' , ['as'=>'shopcart', 'uses'=> 'PageController@getShopCart']);
 
-Route::get('/thanh-toan', ['as' => 'thanh-toan', 'uses' => 'PageController@getCheckout']);
+Route::get('/wishlist' , ['as'=>'wishlist', 'uses'=> 'PageController@getWishlist']);
+
+Route::get('/checkout' , ['as'=>'checkout', 'uses'=> 'PageController@getCheckout']);
+
+Route::get('/add-to-cart/{id}', ['as' => 'add-to-cart', 'uses' => 'PageController@getAddToCart']);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/add-to-cart/{id}', ['as' => 'add-to-cart', 'uses' => 'PageController@getAddToCart']);
+Route::get('/product-single/{id}',['as'=>'product-single',
+    'uses'=>'PageController@getProductsingle'
+]);
