@@ -49,6 +49,10 @@ return [
     'amount'=>'Amount product',
     'rating'=>'Rating product',
     'shop'=>'Shop',
+    'nameRequire' => 'Please input user name!',
+    'emailRequire' => 'Please input user email!',
+    'passRequire' => 'Please input user password!',
+    'msgUpUserSuccess' => 'Update success',
     'lang' => [
         'en' => 'English',
         'vi' => 'Tiếng Việt',

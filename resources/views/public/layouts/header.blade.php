@@ -38,15 +38,12 @@
                     </div>
 
                     <div class="right-header">
-                        <!-- Icon header -->
                         <div class="wrap-icon-header flex-w flex-r-m h-full wrap-menu-click p-t-8">
-                            <!--Search -->
                             <div class="h-full flex-m">
                                 <div class="icon-header-item flex-c-m trans-04 js-show-modal-search">
                                     <img src="/source/images/icons/icon-search.png" alt="SEARCH">
                                 </div>
                             </div>
-                            <!--...-->
                             @guest
                             <div class="wrap-cart-header h-full flex-m m-l-10 menu-click">
                                 <div id="icon-login" class="icon-header-item flex-c-m trans-04" >
@@ -89,23 +86,17 @@
                                     <img src="/source/images/icons/icon-user.png" alt="user">
                                 </div>
                                 <div class="cart-header menu-click-child trans-04">
-                                    <a href="myaccount.html" class="txt-s-101 cl9 hov-cl10 trans-04">@lang('index.welcome_name'): {{ Auth::user()->name }} </a><br/>
-                                    <a href="myaccount.html" class="txt-s-101 cl9 hov-cl10 trans-04">Chi Tiết</a><br/>
-
-                                    <div class="flex-w flex-m p-t-15 p-b-10">
-                                        <button class="dropdown-item flex-c-m txt-s-105 cl0 bg10 size-a-39 hov-btn2 trans-04 p-rl-10 m-r-18">
-                                            @lang('index.btn_logout')
-                                        </button>
-                                    </div>
+                                    <a href="{{route('profile.index')}}" class=" flex-c-m txt-s-101 cl9 hov-cl10 trans-04"><p>{{ Auth::user()->name }}</p> </a><br/>
+                                    <button class="dropdown-item flex-c-m txt-s-105 cl0 bg10 size-a-39 hov-btn2 trans-04 p-rl-10 m-r-18">
+                                        @lang('index.btn_logout')
+                                    </button>
                                 </div>
                             </div>
                             @endguest
-                            <!--....-->
                             @include('public.page.cart')
                         </div>
                     </div>
                 </nav>
-                <!--Edit Search-->
                 <div class="container-search-header" id="container-search-header" style="display:none;">
                     {!! Form::open(['method'=>'POST', 'class'=>'wrap-search-header flex-w']) !!}
                     <button class="flex-c-m trans-04">
@@ -114,7 +105,6 @@
                     {!! Form::text('search', '', ['placeholder'=>'Search','class' => 'plh1']) !!}
                     {!! Form::close() !!}
                 </div>
-                <!--Edit Search-->
             </div>
         </div>
     </header>

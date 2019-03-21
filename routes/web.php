@@ -19,15 +19,11 @@ Route::get('/', ['as' => 'index', 'uses' => 'PageController@getIndex']);
 
 Route::get('/product', ['as' => 'product', 'uses' => 'PageController@getProduct']);
 
-Route::get('/product/{id}', ['as' => 'product', 'uses' => 'PageController@getProduct']);
-
 Route::get('/contact', ['as' => 'contact', 'uses' => 'PageController@getContact']);
 
 Route::get('/registere', ['as' => 'registere', 'uses' => 'PageController@getRegister']);
 
-Route::get('/myaccount', ['as' => 'myaccount', 'uses' => 'PageController@getMyAccount']);
-
-Route::get('/shopcart', ['as' => 'shopcart', 'uses' => 'PageController@getShopCart']);
+Route::get('/shopcart' , ['as'=>'shopcart', 'uses'=> 'PageController@getShopCart']);
 
 Route::get('/wishlist', ['as' => 'wishlist', 'uses' => 'PageController@getWishlist']);
 
@@ -42,4 +38,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/product-single/{id}', ['as' => 'product-single',
     'uses' => 'PageController@getProductsingle',
 ]);
+
 Route::get('/update-to-cart/{id}/{qty}', ['as' => 'update-to-cart', 'uses' => 'PageController@getUpdateToCart']);
+
+Route::resource('profile','ProfileController');
+
+Route::post('/changePassword','ProfileController@changePassword')->name('changePassword');
+
