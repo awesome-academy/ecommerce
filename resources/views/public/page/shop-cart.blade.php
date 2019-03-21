@@ -62,7 +62,9 @@
                                             {{number_format($product['item']['price']*$product['qty'])}} USD
                                         </span>
                                         <div class="fs-15 hov-cl10 pointer">
-                                            <span class="lnr lnr-cross"></span>
+                                            <a href="{{route('del-cart',$product['item']['id'])}}">
+                                                <span class="lnr lnr-cross"></span>
+                                            </a>
                                         </div>
                                     </div>
                                 </td>

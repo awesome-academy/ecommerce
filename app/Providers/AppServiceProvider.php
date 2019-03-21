@@ -29,6 +29,11 @@ class AppServiceProvider extends ServiceProvider
     {
         //
 
+        view()->composer(['public/layouts/header', 'public/page/index'], function ($view) {
+            $category = Category::all();
+            $view->with('category', $category);
+        });
+
         view()->composer(['public/page/cart', 'public/page/shop-cart'], function ($view) {
             if (Session('cart')) {
                 $oldCart = Session::get('cart');
@@ -37,9 +42,5 @@ class AppServiceProvider extends ServiceProvider
             }
         });
 
-        view()->composer(['public/layouts/header', 'public/page/index'], function ($view) {
-            $category = Category::all();
-            $view->with('category', $category);
-        });
     }
 }

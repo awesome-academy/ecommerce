@@ -16,6 +16,7 @@ class PageController extends Controller
         $product = DB::table('product')->paginate(config('setting.number'));
 
         return view('public.page.index', ['product' => $product], compact('product'));
+
     }
 
     public function getProductsingle(Request $req)
@@ -28,11 +29,14 @@ class PageController extends Controller
         } catch (Exception $e) {
             return Redirect::to('/')->with('msg', ' Sorry something went worng. Please try again.');
         }
+
     }
 
-    public function getProduct()
+    public function getProduct($category_id)
     {
-        return view('public.page.product');
+        $product_type = Product::where('category_id', $category_id)->paginate(8);
+
+        return view('public.page.product', ['product_type' => $product_type], compact('product_type'));
     }
 
     public function getContact()
@@ -73,6 +77,19 @@ class PageController extends Controller
         $cart->add($product, $id);
         $req->session()->put('cart', $cart);
 
+        return redirect()->back();
+    }
+
+    public function getDelItemCart($id)
+    {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->removeItem($id);
+        if (count($cart->items) > 0) {
+            Session::put('cart', $cart);
+        } else {
+            Session::forget('cart');
+        }
         return redirect()->back();
     }
 }

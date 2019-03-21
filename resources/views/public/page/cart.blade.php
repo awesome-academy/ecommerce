@@ -30,9 +30,11 @@
                     </div>
 
                     <div class="size-w-14 flex-b">
-                        <button class="lh-10">
-                            <img src="source/images/icons/icon-close.png" alt="CLOSE">
-                        </button>
+                        <a href="{{route('del-cart',$product['item']['id'])}}">
+                            <button class="lh-10">
+                                <img src="source/images/icons/icon-close.png" alt="CLOSE">
+                            </button>
+                        </a>view category
                     </div>
                 </div>
                 @endforeach
@@ -47,6 +49,7 @@
                 @if(Session::has('cart')){{number_format($totalPrice)}} @else 0 @endif USD
             </span>
         </div>
+
         <a href="{{route('shopcart')}}" class="flex-c-m size-a-8 bg10 txt-s-105 cl13 hov-btn2 trans-04">
             @lang('index.order_detail')
         </a>
