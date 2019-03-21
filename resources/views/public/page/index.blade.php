@@ -324,7 +324,7 @@
                             <img src="{{$products->image_list}}" alt="IMG">
                             <div class="block1-content flex-col-c-m p-b-46">
                                 <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-
+                                    {{$products->name}}
                                 </a>
                                 <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
                                 <h2>{{$products->price}} $</h2>
@@ -333,7 +333,7 @@
                                     <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
                                     <img src="source/images/icons/icon-view.png" alt="ICON">
                                     </a>
-                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+                                <a href="{{route('add-to-cart', $products->id)}}" class="block1-icon flex-c-m wrap-pic-max-w ">
                                     <img src="source/images/icons/icon-cart.png" alt="ICON">
                                     </a>
                                     <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">

@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
+
 use Illuminate\Support\Facades\Schema;
 
+use Illuminate\Support\ServiceProvider;
+use App\Models\Category;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -25,5 +27,18 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+
+
+
+
+
+
+
+
+
+        view()->composer(['public/layouts/header', 'public/page/index'], function ($view) {
+            $category = Category::all();
+            $view->with('category', $category);
+        });
     }
 }
