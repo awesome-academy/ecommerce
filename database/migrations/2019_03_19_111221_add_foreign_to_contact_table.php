@@ -14,7 +14,7 @@ class AddForeignToContactTable extends Migration
     public function up()
     {
         Schema::table('contact', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

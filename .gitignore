@@ -22,3 +22,5 @@ Homestead.json
 /storage
 /public/svg
 /public/source/
+resources/assets/
+public/js/

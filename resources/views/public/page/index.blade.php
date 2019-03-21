@@ -323,14 +323,14 @@
                         <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
                             <img src="{{$products->image_list}}" alt="IMG">
                             <div class="block1-content flex-col-c-m p-b-46">
-                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                    {{$products->name}}
+                                <a href="#" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+                                {{$products->name}}
                                 </a>
                                 <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
                                 <h2>{{$products->price}} $</h2>
                                 </span>
                                 <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+                                    <a href="{{route('product-single',$products->id)}}" class="block1-icon flex-c-m wrap-pic-max-w">
                                     <img src="source/images/icons/icon-view.png" alt="ICON">
                                     </a>
                                 <a href="{{route('add-to-cart', $products->id)}}" class="block1-icon flex-c-m wrap-pic-max-w ">
@@ -347,7 +347,7 @@
                 </div>
                 @endforeach
             </div>
-            <div class="row">{{$product}}</div>
+            <div class="flex-w flex-c-m p-t-1">{{$product}}</div>
 
     <section class="sec-product2 bg0 p-t-110 p-b-50">
         <div class="size-w-20 m-rl-auto p-rl-15">
@@ -378,13 +378,14 @@
                                         <div class="block1-bg wrap-pic-w">
                                             <img src="{{$products->image_list}}" alt="IMG">
                                             <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+                                                <a href="#" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+                                                {{$products->name}}
                                                 </a>
                                                 <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
                                                 <h2>{{$products->price}} $</h2>
                                                 </span>
                                                 <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+                                                    <a href="{{route('product-single',$products->id)}}" class="block1-icon flex-c-m wrap-pic-max-w">
                                                     <img src="source/images/icons/icon-view.png" alt="ICON">
                                                     </a>
                                                     <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
@@ -438,14 +439,13 @@
                                         <div class="block1-bg wrap-pic-w">
                                             <img src="{{$products->image_link}}" alt="IMG">
                                             <div class="block1-content flex-col-c-m p-b-46">
-                                                <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                <h2>{{$products->price}} $</h2>
+                                                <a href="#" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
                                                 </a>
                                                 <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                38$
+                                                <h2>{{$products->price}} $</h2>
                                                 </span>
                                                 <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                                    <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+                                                    <a href="{{route('product-single',$products->id)}}" class="block1-icon flex-c-m wrap-pic-max-w">
                                                     <img src="source/images/icons/icon-view.png" alt="ICON">
                                                     </a>
                                                     <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">

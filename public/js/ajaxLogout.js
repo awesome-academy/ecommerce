@@ -120,7 +120,7 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/itlongtruong/ecommerce/resources/js/ajaxLogout.js */"./resources/js/ajaxLogout.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/ecommerce/resources/js/ajaxLogout.js */"./resources/js/ajaxLogout.js");
 
 
 /***/ })

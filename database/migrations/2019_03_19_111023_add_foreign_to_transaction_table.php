@@ -14,7 +14,7 @@ class AddForeignToTransactionTable extends Migration
     public function up()
     {
         Schema::table('transaction', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
