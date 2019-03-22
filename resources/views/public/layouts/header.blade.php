@@ -14,7 +14,7 @@
                         <div class="menu-desktop">
                             <ul class="main-menu">
                                 <li>
-								    <a href="shop-sidebar-grid.html">@lang('index.label_product')</a>
+								    <a href="{{ route('productall') }}">@lang('index.label_product')</a>
 									<ul class="sub-menu">
                                     @foreach($category as $item)
                                         @if($item->parent_id == config('setting.number_default') && $item->id != config('setting.number_default') )

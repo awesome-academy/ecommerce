@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateOrderTable extends Migration
 {
@@ -16,7 +16,7 @@ class CreateOrderTable extends Migration
         Schema::create('order', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('quatity');
-            $table->decimal('amount', 10, 2);
+            $table->decimal('price', 10, 2);
             $table->bigInteger('product_id')->unsigned();
             $table->bigInteger('transaction_id')->unsigned();
             $table->timestamps();

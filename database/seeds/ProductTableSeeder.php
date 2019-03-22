@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use App\Models\Product;
+use Illuminate\Database\Seeder;
 
 class ProductTableSeeder extends Seeder
 {
@@ -16,9 +16,9 @@ class ProductTableSeeder extends Seeder
 
         $categoryId = DB::table('category')->pluck('id')->toArray();
 
-        for ($i = 0; $i <= 10; $i++) {
+        for ($i = 0; $i <= 5; $i++) {
             factory(App\Models\Product::class, 5)->create([
-                'category_id' => $faker->randomElement($categoryId)
+                'category_id' => $faker->randomElement($categoryId),
             ]);
         }
     }

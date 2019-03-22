@@ -27,7 +27,7 @@
                         <div class="size-a-21 pos-relative">
                             <input class="s-full bo-all-1 bocl15 p-rl-20" type="text" name="search" placeholder="Search sảm phẩm...">
                             <button class="flex-c-m fs-18 size-a-22 ab-t-r hov11">
-                            <img class="hov11-child trans-04" src="/source/images/icons/icon-search.png" alt="ICON">
+                            <img class="hov11-child trans-04" src="{{ config('setting.image_folder_icons') }}/icon-search.png" alt="ICON">
                             </button>
                         </div>
                         <div class="p-t-45">
@@ -208,12 +208,12 @@
                                 </div>
                                 <div class="flex-w flex-m m-tb-7">
                                     <button class="dis-block lh-00 pos-relative how-icon1 m-r-15 js-show-list">
-                                    <img class="icon-main trans-04" src="/source/images/icons/icon-menu-list.png" alt="ICON">
-                                    <img class="ab-t-l icon-hov trans-04" src="/source/images/icons/icon-menu-list1.png" alt="ICON">
+                                    <img class="icon-main trans-04" src="{{ config('setting.image_folder_icons') }}/icon-menu-list.png" alt="ICON">
+                                    <img class="ab-t-l icon-hov trans-04" src="{{ config('setting.image_folder_icons') }}/icon-menu-list1.png" alt="ICON">
                                     </button>
                                     <button class="dis-block lh-00 pos-relative how-icon1 menu-active js-show-grid">
-                                    <img class="icon-main trans-04" src="/source/images/icons/icon-grid.png" alt="ICON">
-                                    <img class="ab-t-l icon-hov trans-04" src="/source/images/icons/icon-grid1.png" alt="ICON">
+                                    <img class="icon-main trans-04" src="{{ config('setting.image_folder_icons') }}/icon-grid.png" alt="ICON">
+                                    <img class="ab-t-l icon-hov trans-04" src="{{ config('setting.image_folder_icons') }}/icon-grid1.png" alt="ICON">
                                     </button>
                                 </div>
                             </div>
@@ -232,21 +232,21 @@
                                             <img src="{{$item->image_list}}" alt="IMG">
                                             <div class="block1-content flex-col-c-m p-b-46">
                                                 <a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                                {{$item->name}}
+                                                {{ $item->name }}
                                                 </a>
                                                 <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                                {{$item->price}}
+                                                {{ $item->price }}
                                                 </span>
                                                 <div class="block1-wrap-icon flex-c-m flex-w trans-05">
                                                     <a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
-                                                    <img src="/source/images/icons/icon-view.png" alt="ICON">
+                                                    <img src="{{ config('setting.image_folder_icons') }}/icon-view.png" alt="ICON">
                                                     </a>
                                                     <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                                    <img src="/source/images/icons/icon-cart.png" alt="ICON">
+                                                    <img src="{{ config('setting.image_folder_icons') }}/icon-cart.png" alt="ICON">
                                                     </a>
                                                     <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                                    <img class="icon-addwish-b1" src="/source/images/icons/icon-heart.png" alt="ICON">
-                                                    <img class="icon-addedwish-b1" src="/source/images/icons/icon-heart2.png" alt="ICON">
+                                                    <img class="icon-addwish-b1" src="{{ config('setting.image_folder_icons') }}/icon-heart.png" alt="ICON">
+                                                    <img class="icon-addedwish-b1" src="{{ config('setting.image_folder_icons') }}/icon-heart2.png" alt="ICON">
                                                     </a>
                                                 </div>
                                             </div>
@@ -255,7 +255,7 @@
                                 </div>
                             @endforeach
                             </div>
-                            <div class="flex-w flex-c-m p-t-47">{{$product_type}}</div>
+                            <div class="flex-w flex-c-m p-t-47">{{ $product_type }}</div>
                         </div>
                     </div>
                 </div>

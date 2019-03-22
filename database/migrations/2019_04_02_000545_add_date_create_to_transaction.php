@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class AddForeignToTransactionTable extends Migration
+class AddDateCreateToTransaction extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddForeignToTransactionTable extends Migration
     public function up()
     {
         Schema::table('transaction', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->date('date_create');
         });
     }
 
@@ -26,7 +26,7 @@ class AddForeignToTransactionTable extends Migration
     public function down()
     {
         Schema::table('transaction', function (Blueprint $table) {
-            $table->dropForeign('transaction_user_id_foreign');
+            $table->dropColumn('date_create');
         });
     }
 }

@@ -72,7 +72,13 @@ return [
     'msgUpUserSuccess' => 'Cập nhật thành công',
     'msgPassFail' => 'Mật khẩu hiện tại không đúng. Vui lòng nhập lại',
     'msgPassSame' => 'Mật khẩu không trùng. Vui lòng nhập lại',
-
+    'btn_checkout' => 'Thanh Toán',
+    'label_address' => 'Địa chỉ',
+    'detail_cart' => 'Chi Tiết Đơn Hàng',
+    'order_note' => 'Ghi Chú Đơn Hàng',
+    'product_cart' => 'Sản Phẩm Đặt Hàng',
+    'order_success' => 'Đặt Hàng Thành Công',
+    'voucher' => 'Khuyễn Mãi',
     'lang' => [
         'en' => 'English',
         'vi' => 'Tiếng Việt',

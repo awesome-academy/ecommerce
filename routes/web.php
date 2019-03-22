@@ -17,6 +17,8 @@ return view('welcome');
 
 Route::get('/', ['as' => 'index', 'uses' => 'PageController@getIndex']);
 
+Route::get('/product', ['as' => 'productall', 'uses' => 'PageController@getProductAll']);
+
 Route::get('/product/{id}', ['as' => 'product', 'uses' => 'PageController@getProduct']);
 
 Route::get('/contact', ['as' => 'contact', 'uses' => 'PageController@getContact']);
@@ -48,3 +50,5 @@ Route::post('/changePassword', 'ProfileController@changePassword')->name('change
 Route::get('del-cart/{id}', ['as' => 'del-cart', 'uses' => 'PageController@getDelItemCart']);
 
 Route::get('/search', ['as' => 'search', 'uses' => 'PageController@getSearch']);
+
+Route::post('/checkout', ['as' => 'checkoutcart', 'uses' => 'PageController@postCheckout']);

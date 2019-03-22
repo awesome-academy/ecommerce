@@ -32,7 +32,7 @@
                         <div class="main-frame">
                             <div class="wrap-main-pic">
                                 <div class="main-pic">
-                                    <img src="{{$product->image_link}}"  alt="IMG-SLIDE">
+                                    <img src="{{ $product->image_link }}"  alt="IMG-SLIDE">
                                 </div>
                             </div>
                         </div>
@@ -41,10 +41,10 @@
                 <div class="col-md-5 col-lg-6">
                     <div class="p-l-70 p-t-35 p-l-0-lg">
                         <h4 class="js-name1 txt-l-104 cl3 p-b-16">
-                            {{$product->name}}
+                            {{ $product->name }}
                         </h4>
                         <span class="txt-m-117 cl9">
-                        {{$product->price}} $
+                        {{ $product->price }} $
                         </span>
                         <div class="flex-w flex-m p-t-30 ">
                             <span>@lang('index.rating'):</span>
@@ -71,9 +71,10 @@
                                 <input class="txt-m-102 cl6 txt-center num-product" type="number" name="num-product" value="1">
                                 <div class="btn-num-product-up flex-c-m fs-16"></div>
                             </div>
-                            <button class="flex-c-m txt-s-103 cl0 bg10 size-a-2 hov-btn2 trans-04 m-b-30 js-addcart1">
+                            <a href="{{ route('add-to-cart', $product->id) }}">
+                            <button class="flex-c-m txt-s-103 cl0 bg10 size-a-2 hov-btn2 trans-04 m-b-30">
                             @lang('index.btn_add_cart')
-                            </button>
+                            </button></a>
                         </div>
                         <div class="txt-s-107 p-b-6">
                             <span class="cl6">
@@ -81,7 +82,7 @@
                             </span>
 
                             <span class="cl9">
-                                {{$product_id->name}}
+                                {{ $product_id->name }}
                             </span>
                         </div>
                         <div class="txt-s-107 p-b-6">
@@ -89,7 +90,7 @@
                             @lang('index.money'):
                             </span>
                             <span class="cl9">
-                            {{$product->price}} $
+                            {{ $product->price }} $
                             </span>
                         </div>
                         <div class="txt-s-107 p-b-6">
@@ -97,7 +98,7 @@
                             @lang('index.weight'):
                             </span>
                             <span class="cl9">
-                            {{$product->weight}} KG
+                            {{ $product->weight }} KG
                             </span>
                         </div>
                     </div>
@@ -118,7 +119,7 @@
                     <div class="tab-pane fade show active" id="description" role="tabpanel">
                         <div class="p-t-30">
                             <p class="txt-s-112 cl9">
-                                {{$product->description}}
+                                {{ $product->description }}
                             </p>
                         </div>
                     </div>
@@ -142,24 +143,24 @@
                     <div class="item-slick9 p-all-15">
                         <div class="block1">
                             <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
-                                <img src="{{$pdtt->image_link}}" alt="IMG">
+                                <img src="{{ $pdtt->image_link }}" alt="IMG">
                                 <div class="block1-content flex-col-c-m p-b-46">
                                     <a href="#" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
-                                    {{$pdtt->name}}
+                                    {{ $pdtt->name }}
                                     </a>
                                     <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
-                                    <h2>{{$pdtt->price}} $</h2>
+                                    <h2>{{ $pdtt->price }} $</h2>
                                     </span>
                                     <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                        <a href="{{route('product-single',$pdtt->id)}}" class="block1-icon flex-c-m wrap-pic-max-w">
-                                        <img src="/source/images/icons/icon-view.png" alt="ICON">
+                                        <a href="{{ route('product-single',$pdtt->id) }}" class="block1-icon flex-c-m wrap-pic-max-w">
+                                        <img src="{{ config('setting.image_folder_icons') }}/icon-view.png" alt="ICON">
                                         </a>
-                                        <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
-                                        <img src="/source/images/icons/icon-cart.png" alt="ICON">
+                                        <a href="{{ route('add-to-cart', $pdtt->id) }}" class="block1-icon flex-c-m wrap-pic-max-w">
+                                        <img src="{{ config('setting.image_folder_icons') }}/icon-cart.png" alt="ICON">
                                         </a>
                                         <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
-                                        <img class="icon-addwish-b1" src="/source/images/icons/icon-heart.png" alt="ICON">
-                                        <img class="icon-addedwish-b1" src="/source/images/icons/icon-heart2.png" alt="ICON">
+                                        <img class="icon-addwish-b1" src="{{ config('setting.image_folder_icons') }}/icon-heart.png" alt="ICON">
+                                        <img class="icon-addedwish-b1" src="{{ config('setting.image_folder_icons') }}/icon-heart2.png" alt="ICON">
                                         </a>
                                     </div>
                                 </div>

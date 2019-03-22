@@ -4,9 +4,9 @@ namespace App\Providers;
 
 use App\Models\Cart;
 use App\Models\Category;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
 
-        view()->composer(['public/page/cart', 'public/page/shop-cart'], function ($view) {
+        view()->composer(['public/page/cart', 'public/page/shop-cart', 'public/page/checkout'], function ($view) {
             if (Session('cart')) {
                 $oldCart = Session::get('cart');
                 $cart = new Cart($oldCart);

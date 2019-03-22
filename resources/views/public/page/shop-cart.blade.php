@@ -2,7 +2,7 @@
 @section('content')
 <div>
     <div>
-        <section class="how-overlay2 bg-img1" style="background-image: url(/source/images/post.jpg);">
+        <section class="how-overlay2 bg-img1" style="background-image: url({{ config('setting.image_folder') }}/post.jpg);">
             <div class="container">
                 <div class="txt-center p-t-160 p-b-165">
                     <h2 class="txt-l-101 cl0 txt-center p-b-14 respon1">
@@ -42,12 +42,12 @@
                                             <img src="{{$product['item']['image_list']}}" alt="IMG">
                                         </div>
                                         <span>
-                                        {{$product['item']['name']}}
+                                        {{ $product['item']['name'] }}
                                         </span>
                                     </div>
                                 </td>
                                 <td class="column-2">
-                                    {{number_format($product['item']['price'])}} USD
+                                    {{ number_format($product['item']['price']) }} USD
                                 </td>
                                 <td class="column-3">
                                 <div class="wrap-num-product flex-w flex-m bg12 p-rl-10" id="{{$product['item']['id']}}">
@@ -59,10 +59,10 @@
                                 <td class="column-4">
                                     <div class="flex-w flex-sb-m">
                                         <span>
-                                            {{number_format($product['item']['price']*$product['qty'])}} USD
+                                            {{ number_format($product['item']['price']*$product['qty']) }} USD
                                         </span>
                                         <div class="fs-15 hov-cl10 pointer">
-                                            <a href="{{route('del-cart', $product['item']['id'])}}">
+                                            <a href="{{ route('del-cart', $product['item']['id']) }}">
                                             <span class="lnr lnr-cross"></span>
                                             </a>
                                         </div>
@@ -90,11 +90,11 @@
                             Tổng tiền
                             </span>
                             <span class="size-w-59 txt-m-104 cl6">
-                                @if(Session::has('cart')){{number_format($totalPrice)}} @else 0 @endif USD
+                                @if(Session::has('cart')){{ number_format($totalPrice) }} @else 0 @endif USD
                             </span>
                         </div>
                         <button class="flex-c-m txt-s-105 cl0 bg10 size-a-34 hov-btn2 trans-04 p-rl-10 m-t-43">
-                        <a  class="txt-s-101 cl9 hov-cl10 trans-04" style="color:white" href="checkout.html">Thanh toán</a>
+                        <a  class="txt-s-101 cl9 hov-cl10 trans-04" style="color:white" href="{{ route('checkoutcart') }}">Thanh toán</a>
                         </button>
                     </div>
                 </form>

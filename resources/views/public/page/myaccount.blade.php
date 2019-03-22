@@ -1,7 +1,7 @@
 @extends('public.layouts.master')
 @section('content')
 <div>
-    <section class="how-overlay2 bg-img1" style="background-image: url(source/images/post.jpg);">
+    <section class="how-overlay2 bg-img1" style="background-image: url({{ config('setting.image_folder') }}/post.jpg);">
         <div class="container">
             <div class="txt-center p-t-160 p-b-165">
                 <h2 class="txt-l-101 cl0 txt-center p-b-14 respon1">
@@ -28,7 +28,7 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item p-b-16">
-                                <img src="source/images/avatar.jpg" alt="PRODUCT">
+                                <img src="{{ config('setting.image_folder') }}/avatar.jpg" alt="PRODUCT">
                             </li>
                             <li class="nav-item p-b-16">
                                 <a class="nav-link active" data-toggle="tab" href="#accountdetail" role="tab">Thông tin tài khoản</a>
@@ -55,7 +55,7 @@
                         <div class="tab-content p-l-70 p-l-0-lg">
                             <!--!Detail- -->
                             <div class="tab-pane fade show active" id="accountdetail" role="tabpanel">
-                                {!! Form::open(['method' => 'POST','role'=>'form']) !!}
+                                {{ Form::open(['method' => 'POST','role'=>'form']) }}
                                 <legend>Thông tin</legend>
                                 <div class="form-group">
                                     {{ Form::label('name', 'Họ và tên')}}
@@ -76,7 +76,7 @@
                                 <button id="bcn" onclick="edit()" type="button" class="btn btn-warning">Cập nhật</button>
                                 <button id="bs" onclick="dedit()" style="display:none" type="button" class="btn btn-success">Lưu</button>
                                 <button id="bc" onclick="dedit()" style="display:none" type="button" class="btn btn-danger">Hủy</button>
-                                {!! Form::close() !!}
+                                {{ Form::close() }}
                             </div>
                             <script>
                                 function edit(){
@@ -108,7 +108,7 @@
                             <div class="tab-pane fade" id="orders" role="tabpanel">
                                 <div class="bo-all-1 bocl15 flex-w flex-sb-m p-rl-30 p-tb-10 p-rl-15-ssm">
                                     <div class="flex-t p-tb-8 m-r-30">
-                                        <img class="m-t-6 m-r-10" src="source/images/icons/icon-list.png" alt="IMG">
+                                        <img class="m-t-6 m-r-10" src="{{ config('setting.image_folder_icons') }}/icon-list.png" alt="IMG">
                                         <span class="size-w-53 txt-s-101 cl6">
                                         Chưa có sản phẩm nào được order.
                                         </span>
@@ -154,7 +154,7 @@
                             </div>
                             <!-- - -->
                             <div class="tab-pane fade" id="changepassword" role="tabpanel">
-                                {!! Form::open(['method' => 'POST']) !!}
+                                {{ Form::open(['method' => 'POST']) }}
                                 <div class="row">
                                     <h5 class="txt-m-109 cl3 p-rl-15 p-t-10 p-b-17">
                                         Thay đổi password
@@ -164,7 +164,7 @@
                                             <div class="txt-s-101 cl6 p-b-10">
                                                 Passwork hiện tại
                                             </div>
-                                            {{Form::text('current-pw', '', ['class' => 'txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-20 focus1','placeholder'=>'mat khau moi'])}}
+                                            {{ Form::text('current-pw', '', ['class' => 'txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-20 focus1','placeholder' => 'mat khau moi']) }}
                                         </div>
                                     </div>
                                     <div class="col-12 p-b-23">
@@ -172,7 +172,7 @@
                                             <div class="txt-s-101 cl6 p-b-10">
                                                 Passwork mới
                                             </div>
-                                            {{Form::text('new-pw', '', ['class' => 'txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-20 focus1','placeholder'=>'mat khau moi'])}}
+                                            {{ Form::text('new-pw', '', ['class' => 'txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-20 focus1','placeholder' => 'mat khau moi']) }}
                                         </div>
                                     </div>
                                     <div class="col-12 p-b-23">
@@ -180,14 +180,14 @@
                                             <div class="txt-s-101 cl6 p-b-10">
                                                 Nhập lại password
                                             </div>
-                                            {{Form::text('cf-new-pw', '', ['class' => 'txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-20 focus1','placeholder'=>'nhap lai mat khau moi'])}}
+                                            {{ Form::text('cf-new-pw', '', ['class' => 'txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-20 focus1','placeholder' => 'nhap lai mat khau moi']) }}
                                         </div>
                                     </div>
                                     <div class="flex-w p-rl-15 p-t-17">
-                                        {{ Form::button('Lưu', ['class' => 'flex-c-m txt-s-105 cl0 bg10 size-a-43 hov-btn2 trans-04 p-rl-10'])}}
+                                        {{ Form::button('Lưu', ['class' => 'flex-c-m txt-s-105 cl0 bg10 size-a-43 hov-btn2 trans-04 p-rl-10']) }}
                                     </div>
                                 </div>
-                                {!! Form::close() !!}
+                                {{ Form::close() }}
                             </div>
                         </div>
                     </div>

@@ -2,7 +2,7 @@
 @section('content')
 <div>
     <div>
-        <section class="how-overlay2 bg-img1" style="background-image: url(source/images/post.jpg);">
+        <section class="how-overlay2 bg-img1" style="background-image: url({{ config('setting.image_folder') }}/post.jpg);">
             <div class="container">
                 <div class="txt-center p-t-160 p-b-165">
                     <h2 class="txt-l-101 cl0 txt-center p-b-14 respon1">
@@ -28,7 +28,7 @@
                         <h4 class="txt-m-124 cl3 p-b-28">
                             @lang('index.btn_register')
                         </h4>
-                        {!! Form::open(['method' => 'POST', 'route' => 'register', 'class'=>'how-bor3 p-rl-30 p-t-32 p-b-66']) !!}
+                        {{ Form::open(['method' => 'POST', 'route' => 'register', 'class'=>'how-bor3 p-rl-30 p-t-32 p-b-66']) }}
                         <div class="p-b-24">
                             <div class="txt-s-101 cl6 p-b-10">
                                 @lang('index.label_name')<span class="cl12">*</span>
@@ -45,7 +45,13 @@
                             <div class="txt-s-101 cl6 p-b-10">
                                 @lang('index.label_phone') <span class="cl12">*</span>
                             </div>
-                            {!! Form::text('phone', '', ['class' => 'txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-15 focus1']) !!}
+                            {{ Form::text('phone', '', ['class' => 'txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-15 focus1']) }}
+                        </div>
+                        <div class="p-b-24">
+                            <div class="txt-s-101 cl6 p-b-10">
+                                @lang('index.label_address') <span class="cl12">*</span>
+                            </div>
+                            {{ Form::text('address', '', ['class' => 'txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-15 focus1']) }}
                         </div>
                         <div class="p-b-24">
                             <div class="txt-s-101 cl6 p-b-10">
@@ -60,9 +66,9 @@
                             {{ Form::password('password_confirmation', ['class' => 'txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-15 focus1', 'id' => 'password-confirm', 'required' => 'required']) }}
                         </div>
                         <div class="flex-w flex-m p-t-15">
-                            {!! Form::submit( trans('index.btn_register'), ['class' => 'flex-c-m txt-s-105 cl0 bg10 size-a-39 hov-btn2 trans-04 p-rl-10 m-r-18']) !!}
+                            {{ Form::submit( trans('index.btn_register'), ['class' => 'flex-c-m txt-s-105 cl0 bg10 size-a-39 hov-btn2 trans-04 p-rl-10 m-r-18']) }}
                         </div>
-                        {!! Form::close() !!}
+                        {{ Form::close() }}
                     </div>
                 </div>
             </div>
