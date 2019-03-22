@@ -298,27 +298,20 @@
                     <button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10 how-active1" data-filter="*">
                     Tất cả
                     </button>
-                    <button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10" data-filter=".vegetable-fill">
-                    Rau củ
-                    </button>
-                    <button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10" data-filter=".fruit-fill">
-                    Trái cây Việt Nam
-                    </button>
-                    <button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10" data-filter=".fruit-juic-fill">
-                    Trái cây nhập khẩu
-                    </button>
-                    <button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10" data-filter=".dried-fill">
-                    Đồ khô
-                    </button>
-                    <button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10" data-filter=".other-fill">
-                    Khác
-                    </button>
+                </button>
+                @foreach($category as $item)
+                @if($item->parent_id==config('setting.number_default'))
+                <button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10" data-filter=".{{$item->id}}">
+                {{$item->name}}
+                </button>
+                 @endif
+                @endforeach
                 </div>
             </div>
                        <div class="row isotope-grid">
                 @foreach($product as $products)
                 <!-- - -->
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item fruit-juic-fill other-fill">
+                <div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item {{$products->category_id}}">
                     <div class="block1">
                         <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
                             <img src="{{$products->image_list}}" alt="IMG">

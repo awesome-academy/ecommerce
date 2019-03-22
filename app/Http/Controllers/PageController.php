@@ -13,7 +13,7 @@ class PageController extends Controller
 {
     public function getIndex()
     {
-        $product = DB::table('product')->paginate(config('setting.number'));
+        $product = DB::table('product')->paginate(8);
 
         return view('public.page.index', ['product' => $product], compact('product'));
     }
@@ -30,9 +30,11 @@ class PageController extends Controller
         }
     }
 
-    public function getProduct()
+    public function getProduct($category_id)
     {
-        return view('public.page.product');
+        $product_type = Product::where('category_id', $category_id)->paginate(8);
+
+        return view('public.page.product', ['product_type' => $product_type], compact('product_type'));
     }
 
     public function getContact()
