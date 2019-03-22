@@ -24,3 +24,5 @@ Homestead.json
 /public/source/
 resources/assets/
 public/js/
+public/admin/
+/public/admin/source/

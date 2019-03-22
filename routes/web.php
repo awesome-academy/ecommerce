@@ -17,13 +17,13 @@ return view('welcome');
 
 Route::get('/', ['as' => 'index', 'uses' => 'PageController@getIndex']);
 
-Route::get('/product', ['as' => 'product', 'uses' => 'PageController@getProduct']);
+Route::get('/product/{id}', ['as' => 'product', 'uses' => 'PageController@getProduct']);
 
 Route::get('/contact', ['as' => 'contact', 'uses' => 'PageController@getContact']);
 
 Route::get('/registere', ['as' => 'registere', 'uses' => 'PageController@getRegister']);
 
-Route::get('/shopcart' , ['as'=>'shopcart', 'uses'=> 'PageController@getShopCart']);
+Route::get('/shopcart', ['as' => 'shopcart', 'uses' => 'PageController@getShopCart']);
 
 Route::get('/wishlist', ['as' => 'wishlist', 'uses' => 'PageController@getWishlist']);
 
@@ -41,7 +41,12 @@ Route::get('/product-single/{id}', ['as' => 'product-single',
 
 Route::get('/update-to-cart/{id}/{qty}', ['as' => 'update-to-cart', 'uses' => 'PageController@getUpdateToCart']);
 
-Route::resource('profile','ProfileController');
+Route::resource('profile', 'ProfileController');
 
-Route::post('/changePassword','ProfileController@changePassword')->name('changePassword');
+Route::post('/changePassword', 'ProfileController@changePassword')->name('changePassword');
 
+Route::get('del-cart/{id}', ['as' => 'del-cart', 'uses' => 'PageController@getDelItemCart']);
+
+Route::get('/search', ['as' => 'search', 'uses' => 'PageController@getSearch']);
+
+Route::get('/admin/index', ['as' => 'admin', 'uses' => 'IndexController@getIndex']);

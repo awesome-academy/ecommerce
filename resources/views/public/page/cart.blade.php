@@ -30,9 +30,11 @@
                     </div>
 
                     <div class="size-w-14 flex-b">
-                        <button class="lh-10">
-                            <img src="/source/images/icons/icon-close.png" alt="CLOSE">
-                        </button>
+                        <a href="{{route('del-cart', $product['item']['id'])}}">
+                            <button class="lh-10">
+                                <img src="source/images/icons/icon-close.png" alt="CLOSE">
+                            </button>
+                         </a>
                     </div>
                 </div>
                 @endforeach
