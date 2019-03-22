@@ -30,9 +30,11 @@ class PageController extends Controller
         }
     }
 
-    public function getProduct()
+    public function getProduct($category_id)
     {
-        return view('public.page.product');
+        $product_type = Product::where('category_id', $category_id)->paginate(config('setting.number'));
+
+        return view('public.page.product', ['product_type' => $product_type], compact('product_type'));
     }
 
     public function getContact()

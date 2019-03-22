@@ -31,7 +31,7 @@
 
                     <div class="size-w-14 flex-b">
                         <button class="lh-10">
-                            <img src="source/images/icons/icon-close.png" alt="CLOSE">
+                            <img src="/source/images/icons/icon-close.png" alt="CLOSE">
                         </button>
                     </div>
                 </div>
