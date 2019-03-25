@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Session;
-use App\Models\Category;
 
 class PageController extends Controller
 {
@@ -18,7 +18,8 @@ class PageController extends Controller
         return view('public.page.index', ['product' => $product], compact('product'));
     }
 
-    public function getProductsingle(Request $req){
+    public function getProductsingle(Request $req)
+    {
         try {
             $product = Product::where('id', $req->id)->first();
             $product_id = Category::find($product->category_id);
@@ -29,7 +30,8 @@ class PageController extends Controller
         }
     }
 
-    public function getProduct(){
+    public function getProduct()
+    {
         return view('public.page.product');
     }
 
@@ -73,4 +75,18 @@ class PageController extends Controller
 
         return redirect()->back();
     }
+
+    public function getUpdateToCart(Request $request)
+    {
+        if ($request->ajax()) {
+            $id = $request->get('id');
+            $qty = $request->get('qty');
+            $oldCart = Session::has('cart') ? Session::get('cart') : null;
+            $cart = new Cart($oldCart);
+            $product = Product::find($id);
+            $cart->update($product, $id, $qty);
+            Session::put('cart', $cart);
+        }
+    }
+
 }

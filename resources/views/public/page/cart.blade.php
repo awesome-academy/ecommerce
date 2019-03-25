@@ -1,6 +1,6 @@
 <div class="wrap-cart-header h-full flex-m m-l-10 menu-click">
     <div class="icon-header-item flex-c-m trans-04 icon-header-noti" data-notify="@if(Session::has('cart')){{Session('cart')->totalQty}}@else 0 @endif">
-        <img src="source/images/icons/icon-cart-2.png" alt="CART">
+        <img src="/source/images/icons/icon-cart-2.png" alt="CART">
     </div>
     @if(Session::has('cart'))
     <div class="cart-header menu-click-child trans-04">

@@ -50,6 +50,22 @@ class Cart
     {
         $this->totalQty -= $this->items[$id]['qty'];
         $this->totalPrice -= $this->items[$id]['price'];
-        unset($this->items[$id]);
+        unset($this->items[$id], $this->totalPrice);
+    }
+
+    public function update($item, $id, $qty)
+    {
+        $this->items[$id]['qty'] = $qty;
+        $this->items[$id]['price'] = $qty * $item->price;
+        if ($this->items[$id]['qty'] <= 0) {
+            unset($this->items[$id], $this->totalPrice);
+        }
+        $this->totalQty = 0;
+        $this->totalPrice = 0;
+        foreach ($this->items as $element) {
+            $this->totalQty += $element['qty'];
+            $this->totalPrice += $element['price'];
+        }
+
     }
 }

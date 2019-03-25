@@ -50,6 +50,7 @@
 
     {{ Html::script('source/vendor/jquery/jquery-3.2.1.min.js') }}
     {{ Html::script(asset('js/ajaxLogout.js')) }}
+    {{ Html::script(asset('js/ajaxUpdateCart.js')) }}
     {{ Html::script('source/vendor/animsition/js/animsition.min.js') }}
 
     {{ Html::script('source/vendor/bootstrap/js/popper.js') }}
