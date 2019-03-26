@@ -229,6 +229,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Format' => App\Helpers\FormatData::class,
+        'Model' => Illuminate\Database\Eloquent\ModelNotFoundException::class,
 
     ],
 
