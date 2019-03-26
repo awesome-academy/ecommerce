@@ -50,7 +50,7 @@
                                     {{number_format($product['item']['price'])}} USD
                                 </td>
                                 <td class="column-3">
-                                    <div class="wrap-num-product flex-w flex-m bg12 p-rl-10">
+                                <div class="wrap-num-product flex-w flex-m bg12 p-rl-10" id="{{$product['item']['id']}}">
                                         <div class="btn-num-product-down flex-c-m fs-29"></div>
                                         <input class="txt-m-102 cl6 txt-center num-product" type="number" name="num-product1" value="{{$product['qty']}}">
                                         <div class="btn-num-product-up flex-c-m fs-16"></div>
