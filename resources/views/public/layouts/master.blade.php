@@ -4,9 +4,10 @@
     <title>Organic Store</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="/source/images/icons/favicon.png"/>
+    <link rel="icon" type="image/png" href="source/images/icons/favicon.png"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=840151966334393&autoLogAppEvents=1"></script>
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c98dd989852eb0011ce9cec&product=inline-share-buttons' async='async'></script>
 
     {{ Html::style('source/vendor/bootstrap/css/bootstrap.min.css') }}
 
@@ -50,7 +51,6 @@
 
     {{ Html::script('source/vendor/jquery/jquery-3.2.1.min.js') }}
     {{ Html::script(asset('js/ajaxLogout.js')) }}
-    {{ Html::script(asset('js/ajaxUpdateCart.js')) }}
     {{ Html::script('source/vendor/animsition/js/animsition.min.js') }}
 
     {{ Html::script('source/vendor/bootstrap/js/popper.js') }}
