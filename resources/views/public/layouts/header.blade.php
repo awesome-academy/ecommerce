@@ -14,18 +14,22 @@
                         <div class="menu-desktop">
                             <ul class="main-menu">
                                 <li>
-                                    <a href="{{ route('product') }}">@lang('index.label_product')</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="shop-sidebar-grid.html">RAU CỦ</a></li>
-                                        <ul class="sub-menu">
-                                            <li><a href="shop-sidebar-grid.html">RAU</a></li>
-                                            <li><a href="shop-sidebar-grid.html">CỦ</a></li>
-                                        </ul>
-                                        <li><a href="shop-sidebar-grid.html">TRÁI CÂY ĐẶC SẢN VIỆT NAM</a></li>
-                                        <li><a href="shop-sidebar-grid.html">TRÁI CÂY NHẬP KHẨU</a></li>
-                                        <li><a href="shop-sidebar-grid.html">ĐỒ KHÔ</a></li>
-                                    </ul>
-                                </li>
+								    <a href="shop-sidebar-grid.html">@lang('index.label_product')</a>
+									<ul class="sub-menu">
+                                    @foreach($category as $item)
+                                        @if($item->parent_id == config('setting.number_default') && $item->id != config('setting.number_default') )
+                                        <li><a href="{{ route('product', $item->id) }}">{{$item->name}}</a>
+                                            <ul class="sub-menu">
+                                                @foreach($category as $item_parent)
+                                                    @if($item_parent->parent_id != config('setting.number_default') && $item_parent->parent_id == $item->id )
+                                                            <li><a href="{{ route('product', $item_parent->id) }}">{{$item_parent->name}}</a></li>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                        </li>
+                                        @endif
+                                    @endforeach
+									</ul>
                                 <li>
                                     <a href="{{ route('contact') }}">@lang('index.label_contact')</a>
                                 </li>
