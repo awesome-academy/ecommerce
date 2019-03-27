@@ -8,18 +8,18 @@
                     @lang('index.shop')
                 </h2>
                 <span class="txt-m-201 cl0 flex-c-m flex-w">
-                <a href="home.htm" class="txt-m-201 cl0 hov-cl10 trans-04 m-r-6">
-                @lang('index.welcome_home')
-                </a>
-                <a href="shop-sidebar-grid.html" class="txt-m-201 cl0 hov-cl10 trans-04 m-r-6">
-                / @lang('index.label_product')
-                </a>
-                <a href="#" class="txt-m-201 cl0 hov-cl10 trans-04 m-r-6">
-                / @lang('index.vegetable')
-                </a>
-                <span>
-                / @lang('index.label_product')
-                </span>
+                    <a href="{{route('index')}}" class="txt-m-201 cl0 hov-cl10 trans-04 m-r-6">
+                        @lang('index.welcome_home')
+                    </a>
+                    <a href="{{route('product')}}" class="txt-m-201 cl0 hov-cl10 trans-04 m-r-6">
+                        / @lang('index.label_product')
+                    </a>
+                    <a href="#" class="txt-m-201 cl0 hov-cl10 trans-04 m-r-6">
+                        / @lang('index.vegetable')
+                    </a>
+                    <span>
+                        / @lang('index.label_product')
+                    </span>
                 </span>
             </div>
         </div>
@@ -34,6 +34,9 @@
                                 <div class="main-pic">
                                     <img src="{{$product->image_link}}"  alt="IMG-SLIDE">
                                 </div>
+                                <span>
+                                    <div class="fb-like" data-href="{{Request::url()}}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -44,18 +47,18 @@
                             {{$product->name}}
                         </h4>
                         <span class="txt-m-117 cl9">
-                        {{$product->price}} $
+                            {{$product->price}} $
                         </span>
                         <div class="flex-w flex-m p-t-30 ">
                             <span>@lang('index.rating'):</span>
                         </div>
                         <div class="flex-w flex-m p-b-27">
                             <span class="fs-16 cl11 lh-15 txt-center m-r-15">
-                            <i class="fa fa-star m-rl-1"></i>
-                            <i class="fa fa-star m-rl-1"></i>
-                            <i class="fa fa-star m-rl-1"></i>
-                            <i class="fa fa-star m-rl-1"></i>
-                            <i class="fa fa-star m-rl-1"></i>
+                                <i class="fa fa-star m-rl-1"></i>
+                                <i class="fa fa-star m-rl-1"></i>
+                                <i class="fa fa-star m-rl-1"></i>
+                                <i class="fa fa-star m-rl-1"></i>
+                                <i class="fa fa-star m-rl-1"></i>
                             </span>
                             <span class="txt-s-115 cl6 p-b-3">
                             </span>
@@ -72,7 +75,7 @@
                                 <div class="btn-num-product-up flex-c-m fs-16"></div>
                             </div>
                             <button class="flex-c-m txt-s-103 cl0 bg10 size-a-2 hov-btn2 trans-04 m-b-30 js-addcart1">
-                            @lang('index.btn_add_cart')
+                                @lang('index.btn_add_cart')
                             </button>
                         </div>
                         <div class="txt-s-107 p-b-6">
@@ -86,18 +89,18 @@
                         </div>
                         <div class="txt-s-107 p-b-6">
                             <span class="cl6">
-                            @lang('index.money'):
+                                @lang('index.money'):
                             </span>
                             <span class="cl9">
-                            {{$product->price}} $
+                                {{$product->price}} $
                             </span>
                         </div>
                         <div class="txt-s-107 p-b-6">
                             <span class="cl6">
-                            @lang('index.weight'):
+                                @lang('index.weight'):
                             </span>
                             <span class="cl9">
-                            {{$product->weight}} KG
+                                {{$product->weight}} KG
                             </span>
                         </div>
                     </div>
@@ -122,7 +125,8 @@
                             </p>
                         </div>
                     </div>
-                        <div class="tab-pane fade" id="reviews" role="tabpanel">
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        <div class="fb-comments" data-href="{{Request::url()}}" data-numposts="5"></div>
                     </div>
                 </div>
             </div>
@@ -133,43 +137,43 @@
             <div class="wrap-slick9">
                 <div class="flex-w flex-sb-m p-b-33 p-rl-15">
                     <h3 class="txt-l-112 cl3 m-r-20 respon1 p-tb-15">
-                       @lang('index.similar')
-                    </h3>
-                    <div class="wrap-arrow-slick9 flex-w m-t-6"></div>
-                </div>
-                <div class="slick9">
-                    @foreach($product_tt as $pdtt)
-                    <div class="item-slick9 p-all-15">
-                        <div class="block1">
-                            <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
-                                <img src="{{$pdtt->image_link}}" alt="IMG">
-                                <div class="block1-content flex-col-c-m p-b-46">
-                                    <a href="#" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+                     @lang('index.similar')
+                 </h3>
+                 <div class="wrap-arrow-slick9 flex-w m-t-6"></div>
+             </div>
+             <div class="slick9">
+                @foreach($product_tt as $pdtt)
+                <div class="item-slick9 p-all-15">
+                    <div class="block1">
+                        <div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
+                            <img src="{{$pdtt->image_link}}" alt="IMG">
+                            <div class="block1-content flex-col-c-m p-b-46">
+                                <a href="#" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
                                     {{$pdtt->name}}
-                                    </a>
-                                    <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+                                </a>
+                                <span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
                                     <h2>{{$pdtt->price}} $</h2>
-                                    </span>
-                                    <div class="block1-wrap-icon flex-c-m flex-w trans-05">
-                                        <a href="{{route('product-single',$pdtt->id)}}" class="block1-icon flex-c-m wrap-pic-max-w">
+                                </span>
+                                <div class="block1-wrap-icon flex-c-m flex-w trans-05">
+                                    <a href="{{route('product-single',$pdtt->id)}}" class="block1-icon flex-c-m wrap-pic-max-w">
                                         <img src="/source/images/icons/icon-view.png" alt="ICON">
-                                        </a>
-                                        <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+                                    </a>
+                                    <a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
                                         <img src="/source/images/icons/icon-cart.png" alt="ICON">
-                                        </a>
-                                        <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+                                    </a>
+                                    <a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
                                         <img class="icon-addwish-b1" src="/source/images/icons/icon-heart.png" alt="ICON">
                                         <img class="icon-addedwish-b1" src="/source/images/icons/icon-heart2.png" alt="ICON">
-                                        </a>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    @endforeach
-                    </div>
                 </div>
+                @endforeach
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 </div>
 @endsection
