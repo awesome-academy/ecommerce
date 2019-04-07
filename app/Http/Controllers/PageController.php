@@ -101,7 +101,16 @@ class PageController extends Controller
         } else {
             Session::forget('cart');
         }
+
         return redirect()->back();
+    }
+    public function getSearch(Request $req)
+    {
+        $product = Product::where('name', 'like', '%' . $req->key . '%')
+            ->orWhere('price', $req->key)
+            ->paginate(config('setting.number'));
+
+        return view('public.page.search', compact('product'));
     }
 
 }
